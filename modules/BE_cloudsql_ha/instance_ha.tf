@@ -57,7 +57,7 @@ resource "google_sql_database_instance" "instance" {
     }
   }
 }
-/*
+
 # Create a read replica for the Cloud SQL instance
 resource "google_sql_database_instance" "read_replica" {
   count                = length(var.read_replica_regions)
@@ -72,15 +72,7 @@ resource "google_sql_database_instance" "read_replica" {
     edition = "ENTERPRISE_PLUS"
   }
 }
-*/
 
-
-
-resource "google_sql_user" "iam_group_user" {
-  name     = "GCP_CIRRUS_HCC_POC@groups.optum.com"
-  instance = var.instance_name
-  type     = "CLOUD_IAM_GROUP"
-}
 
 
 
