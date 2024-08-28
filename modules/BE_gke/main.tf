@@ -55,7 +55,7 @@ resource "kubernetes_persistent_volume" "pv" {
   metadata {
     name = "${var.namespace}-pv"
         labels = {
-      "delete-protection" = "true"
+      "delete-protection" = "false"
     }
 
   }

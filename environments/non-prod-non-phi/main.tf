@@ -40,7 +40,7 @@ module "namespace" {
 # Call the HA Cloud SQL instance module
 
 module "ha_cloud_sql_instance" {
-  source = "../../modules/cloudsql_ha"
+  source = "../modules/BE_cloudsql_ha"
 
   project_id                = var.project_id
   region                    = var.region

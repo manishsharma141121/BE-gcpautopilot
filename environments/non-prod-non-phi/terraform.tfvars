@@ -29,7 +29,7 @@ artifact_viewer_member = "project@gserviceaccount.com"
   db_tier                  = "db-f1-micro"
   database_name            = "my_database"
   db_username              = "admin"
-  allowed_consumer_projects = ["inspired-goal-432411-p0"]
+  allowed_consumer_projects = ["Allowed Project"]
 
 #Instance
   instance_name = "dev"
@@ -48,5 +48,3 @@ backup_configuration = {
 
 # Edition
 edition = "ENTERPRISE_PLUS"
-
-# Data Cache
