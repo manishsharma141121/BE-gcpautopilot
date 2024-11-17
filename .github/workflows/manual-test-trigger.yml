@@ -16,10 +16,32 @@ on:
         - stage
         - prod
 
-      custom_message:
-        description: "Enter the customer Name"
+      CUSTOMER_NUMBER:
+        description: "Enter the customer Number"
         required: false
         default: "uhg"
+        type: number
+
+      TEST_FILE:
+        description: 'Select test file to run'
+        default: ""
+        required: true
+        type: choice
+        options:
+        - test_file_1.py
+        - test_file_2.py
+        - test_file_3.py
+
+      MGID_COUNT:
+        description: "Number of member group IDs to generate"
+        required: true
+        default: ""
+        type: number
+
+      EFFECTIVE_DATE:
+        description: "MM/DD/YYYY format"
+        required: true
+        default: ""
         type: string
 
 jobs:
@@ -27,4 +49,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
      - name: Run test on Env
-       run: echo "Run test script on ${{ github.event.inputs.environment_name }}"
+       run: echo "Run test script on ${{ github.event.inputs.environment_name }} environment"
