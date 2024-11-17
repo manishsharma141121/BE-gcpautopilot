@@ -7,7 +7,7 @@ on:
     # Inputs the workflow accepts.
     inputs:
       environment_name:
-        description: 'The environmen to test the application'
+        description: 'Environment_name: The environmen to test the application'
         default: "dev"
         required: true
         type: choice
@@ -15,17 +15,15 @@ on:
         - dev
         - stage
         - prod
-        label: "Environment"
-
+      
       CUSTOMER_NUMBER:
-        description: "Enter the customer Number"
+        description: "CUSTOMER_NUMBER: Enter the customer Number"
         required: false
         default: "uhg"
         type: number
-        label: "CUSTOMER_NUMBER"
-
+     
       TEST_FILE:
-        description: 'Select test file to run'
+        description: 'TEST_FILE: Select test file to run'
         default: ""
         required: true
         type: choice
@@ -33,46 +31,39 @@ on:
         - test_file_1.py
         - test_file_2.py
         - test_file_3.py
-        label: "TEST_FILE"
-
+  
       MGID_COUNT:
-        description: "Number of member group IDs to generate"
+        description: "MGID_COUNT: Number of member group IDs to generate"
         required: true
         default: ""
         type: number
-        label: "MGID_COUNT"
-
+   
       EFFECTIVE_DATE:
-        description: "MM/DD/YYYY format"
+        description: "EFFECTIVE_DATE: MM/DD/YYYY format"
         required: true
         default: ""
         type: string
-        label: "EFFECTIVE_DATE"
-
+  
       ON_DEMAND_MIGRATION:
-        description: "Enable on-demand migration"
+        description: "ON_DEMAND_MIGRATION: Enable on-demand Migration"
         required: false
         type: boolean
-        label: "ON_DEMAND_MIGRATION"
 
       OBM_PUBLISH:
-        description: "Enable OBM Publish"
+        description: "OBM_PUBLISH: Enable OBM Publish"
         required: false
         type: boolean
-        label: "OBM_PUBLISH"
-
+   
       notifyDL:
-        description: "Email results"
+        description: "notifyDL: Email results"
         required: false
         type: boolean
-        label: "notifyDL"
-
+     
       TRIGGER_CIRRUS_JOB:
-        description: "Trigger Cirrus Vikings QA job"
+        description: "TRIGGER_CIRRUS_JOB: Trigger Cirrus Vikings QA job"
         required: false
         type: boolean
-        label: "TRIGGER_CIRRUS_JOB"
-
+   
 jobs:
   run-tests:
     runs-on: ubuntu-latest
