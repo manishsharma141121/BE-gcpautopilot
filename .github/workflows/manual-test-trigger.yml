@@ -1,6 +1,6 @@
 # This is a basic workflow that is manually triggered
 
-name: Manual workflow
+name: Manual test trigger workflow
 
 on:
   workflow_dispatch:
@@ -13,8 +13,15 @@ on:
         type: choice
         options:
         - dev
+        - stage
         - prod
-        
+
+      custom_message:
+        description: "Enter the customer Name"
+        required: false
+        default: "uhg"
+        type: string
+
 jobs:
   run-tests:
     runs-on: ubuntu-latest
