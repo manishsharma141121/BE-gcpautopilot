@@ -44,6 +44,11 @@ on:
         default: ""
         type: string
 
+      ON_DEMAND_MIGRATION:
+        description: "Enable on-demand migration"
+        required: false
+        type: boolean
+
 jobs:
   run-tests:
     runs-on: ubuntu-latest
