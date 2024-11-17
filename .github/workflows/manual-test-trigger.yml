@@ -15,12 +15,14 @@ on:
         - dev
         - stage
         - prod
+        label: "Environment"
 
       CUSTOMER_NUMBER:
         description: "Enter the customer Number"
         required: false
         default: "uhg"
         type: number
+        label: "CUSTOMER_NUMBER"
 
       TEST_FILE:
         description: 'Select test file to run'
@@ -31,38 +33,45 @@ on:
         - test_file_1.py
         - test_file_2.py
         - test_file_3.py
+        label: "TEST_FILE"
 
       MGID_COUNT:
         description: "Number of member group IDs to generate"
         required: true
         default: ""
         type: number
+        label: "MGID_COUNT"
 
       EFFECTIVE_DATE:
         description: "MM/DD/YYYY format"
         required: true
         default: ""
         type: string
+        label: "EFFECTIVE_DATE"
 
       ON_DEMAND_MIGRATION:
         description: "Enable on-demand migration"
         required: false
         type: boolean
+        label: "ON_DEMAND_MIGRATION"
 
       OBM_PUBLISH:
         description: "Enable OBM Publish"
         required: false
         type: boolean
+        label: "OBM_PUBLISH"
 
       notifyDL:
         description: "Email results"
         required: false
         type: boolean
+        label: "notifyDL"
 
       TRIGGER_CIRRUS_JOB:
         description: "Trigger Cirrus Vikings QA job"
         required: false
         type: boolean
+        label: "TRIGGER_CIRRUS_JOB"
 
 jobs:
   run-tests:
