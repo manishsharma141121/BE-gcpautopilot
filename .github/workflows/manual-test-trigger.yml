@@ -49,6 +49,21 @@ on:
         required: false
         type: boolean
 
+      OBM_PUBLISH:
+        description: "Enable OBM Publish"
+        required: false
+        type: boolean
+
+      notifyDL:
+        description: "Email results"
+        required: false
+        type: boolean
+
+      TRIGGER_CIRRUS_JOB:
+        description: "Trigger Cirrus Vikings QA job"
+        required: false
+        type: boolean
+
 jobs:
   run-tests:
     runs-on: ubuntu-latest
